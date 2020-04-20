@@ -1,7 +1,10 @@
 import mainHTML from "./atoms/default/server/templates/main.html!text";
+import share from "./atoms/default/server/templates/share.html!text";
 import rp from "request-promise";
 import { writeFileSync } from "fs";
 import Mustache from "mustache";
+
+const partials = { share };
 
 export async function render() {
   const html = await rp(

@@ -13,5 +13,15 @@
     <p class="gv-standfirst">
       <span>{{standfirst}}</span>
     </p>
+    <div class="gv-mobile-share">{{> share}}</div>
+    <div class="gv-desktop-share">{{> share}}</div>
+  </div>
+  <div class="gv-left-block">
+    <div class="gv-timestamp">{{datestamp}}</div>
+  </div>
+  <div class="interactive-body">
+    {{#copy}}
+    <p>{{.}}</p>
+    {{/copy}}
   </div>
 </div>
