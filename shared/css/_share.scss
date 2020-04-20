@@ -1,0 +1,73 @@
+.mt-share {
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  margin-top: 6px;
+  display: block;
+  bottom: 4px;
+  left: 0px;
+  position: relative;
+
+  @include mq(tablet) {
+    display: block;
+    // position: relative;
+    bottom: 4px;
+    right: 0px;
+  }
+
+  @include mq(leftCol) {
+    text-align: right;
+    display: inline-block;
+  }
+}
+
+.mt-share__button {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  float: left;
+  margin-right: 4px;
+  border: 1px solid $neutral-7;
+
+  &:hover {
+    background-color: $neutral-7;
+
+    .mt-share__icon {
+      fill: $neutral-100;
+    }
+  }
+}
+
+.mt-share__icon {
+  fill: $neutral-100;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.interactive-share {
+  @include mq(leftCol) {
+    margin-left: 180px;
+    text-align: left;
+  }
+  @include mq(wide) {
+    margin-left: 260px;
+  }
+}
+
+.gv-desktop-share {
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    border-bottom: 1px dashed $neutral-7;
+    z-index: 1;
+  }
+}
