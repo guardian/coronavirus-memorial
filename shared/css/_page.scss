@@ -1,0 +1,83 @@
+.interactive-body {
+  margin-top: 12px;
+
+  p {
+    max-width: 620px;
+    margin-bottom: 12px;
+  }
+
+  @include mq(leftCol) {
+    > p,
+    > h2,
+    h3,
+    .interactive-grid,
+    .gv-quote {
+      margin-left: 180px;
+    }
+  }
+
+  @include mq(wide) {
+    > p,
+    > h2,
+    h3,
+    .interactive-grid,
+    .gv-quote {
+      margin-left: 260px;
+    }
+  }
+}
+.gv-left-block {
+  position: relative;
+  @include mq(mobile) {
+    // transform: translateY(240px);
+    // position: absolute;
+    left: -10px;
+    width: 100vw;
+    padding-left: 10px;
+    box-sizing: border-box;
+    grid-column: span 2;
+    display: block;
+    // background-image: repeating-linear-gradient(to bottom, $neutral-7, $neutral-7 0.0625rem, transparent 0.0625rem, transparent 0.25rem);
+    background-image: repeating-linear-gradient(
+      90deg,
+      $neutral-7,
+      $neutral-7 0.0625rem,
+      transparent 0.0625rem,
+      transparent 0.25rem
+    );
+    background-repeat: repeat-x;
+    background-position: top;
+    // background-size: 0.0625rem 0.8125rem;
+    background-size: 5px 1px;
+    padding-top: 12px;
+    margin-bottom: 6px;
+    margin-top: 12px;
+  }
+
+  @include mq(tablet) {
+    left: 0;
+    padding-left: 0;
+    width: 100%;
+    // background-image: none;
+  }
+  @include mq(leftCol) {
+    // transform: translateY(240px);
+    position: absolute;
+    width: 160px;
+    grid-column: span 2;
+  }
+
+  @include mq(wide) {
+    width: 240px;
+  }
+
+  .gv-timestamp {
+    @include fs-textSans(1);
+    color: #fff;
+    display: block;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    // border-bottom: 1px solid $neutral-7;
+    margin-bottom: 4px;
+  }
+}
