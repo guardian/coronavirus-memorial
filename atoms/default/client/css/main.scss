@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+.interactive-header {
+  border-bottom: 1px solid $neutral-46;
+}
+
 .seo-headline {
   position: absolute;
   top: -2000px;
@@ -28,6 +32,27 @@
 }
 
 .interactive-body {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    border-left: 1px solid $neutral-46;
+    z-index: 1;
+    display: none;
+
+    @include mq(leftCol) {
+      display: block;
+      left: -10px;
+      height: calc(100%);
+    }
+    @include mq(wide) {
+      // left: 250px;
+    }
+  }
   p {
     @include fs-headline(3);
     font-weight: 200;
@@ -40,6 +65,10 @@
       line-height: 28px;
     }
   }
+}
+
+.gv-share {
+  margin-top: 96px;
 }
 
 .gv-timestamp {

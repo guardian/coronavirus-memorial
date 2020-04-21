@@ -14,6 +14,45 @@
     }
   }
 
+  .l-side-margins {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      border-left: 1px solid $neutral-46;
+      z-index: 1;
+
+      display: none;
+
+      @include mq(leftCol) {
+        display: block;
+        left: 0px;
+        height: calc(100%);
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      border-left: 1px solid $neutral-46;
+      z-index: 1;
+
+      display: none;
+
+      @include mq(leftCol) {
+        display: block;
+        right: 0px;
+        height: calc(100%);
+      }
+    }
+  }
+
   .page-wrapper {
     padding: 0;
     position: relative;
