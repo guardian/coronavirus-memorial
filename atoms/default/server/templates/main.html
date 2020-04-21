@@ -1,27 +1,29 @@
 <div class="interactive-wrapper">
-  <div class="interactive-header interactive-header__main">
-    <a
-      class="gv-section-label"
-      href="https://www.theguardian.com/world/coronavirus-outbreak"
-    >
-      <h3>Coronavirus<span class="gv-section__bar"></span></h3>
-    </a>
+  <div class="page-wapper gv-page-width">
+    <div class="interactive-header interactive-header__main">
+      <a
+        class="gv-section-label"
+        href="https://www.theguardian.com/world/coronavirus-outbreak"
+      >
+        <h3>Coronavirus<span class="gv-section__bar"></span></h3>
+      </a>
 
-    <h1 class="gv-headline">
-      {{headline}}<span class="gv-headline__bars"></span>
-    </h1>
-    <p class="gv-standfirst">
-      <span>{{standfirst}}</span>
-    </p>
-    <div class="gv-mobile-share">{{> share}}</div>
-    <div class="gv-desktop-share">{{> share}}</div>
-  </div>
-  <div class="gv-left-block">
-    <div class="gv-timestamp">{{datestamp}}</div>
-  </div>
-  <div class="interactive-body">
-    {{#copy}}
-    <p>{{.}}</p>
-    {{/copy}}
+      <h1 class="gv-headline">
+        {{headline}}<span class="gv-headline__bars"></span>
+      </h1>
+      <p class="gv-standfirst-wrapper gv-main-column">
+        <span>{{standfirst}}</span>
+      </p>
+      <div class="gv-mobile-share">{{> share}}</div>
+      <div class="gv-desktop-share">{{> share}}</div>
+    </div>
+    <div class="gv-share-container gv-left-column">
+      <div class="gv-timestamp">{{datestamp}}</div>
+    </div>
+    <div class="interactive-body gv-main-column">
+      {{#copy}}
+      <p>{{.}}</p>
+      {{/copy}}
+    </div>
   </div>
 </div>

@@ -29,10 +29,10 @@
   border-radius: 20px;
   float: left;
   margin-right: 4px;
-  border: 1px solid $neutral-7;
+  border: 1px solid $neutral-100;
 
   &:hover {
-    background-color: $neutral-7;
+    background-color: $neutral-100;
 
     .mt-share__icon {
       fill: $neutral-100;
@@ -67,7 +67,6 @@
     left: 0;
     height: 2px;
     width: 100%;
-    border-bottom: 1px dashed $neutral-7;
     z-index: 1;
   }
 }
