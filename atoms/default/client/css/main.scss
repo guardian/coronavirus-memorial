@@ -20,6 +20,12 @@
   left: -2000px;
 }
 
+.gv-headline__wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
 .gv-headline {
   @include fs-titlepiece(1);
   color: $neutral-96;
@@ -28,6 +34,23 @@
 
   @include mq(desktop) {
     font-size: 8vw;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.gv-standfirst {
+  @include fs-headline(3);
+  color: $neutral-96;
+  font-weight: 700;
+  line-height: 1;
+
+  @include mq(desktop) {
+    font-size: 40px;
+
+    width: 400px;
   }
 }
 
@@ -48,9 +71,6 @@
       display: block;
       left: -10px;
       height: calc(100%);
-    }
-    @include mq(wide) {
-      // left: 250px;
     }
   }
   p {
