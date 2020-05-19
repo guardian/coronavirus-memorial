@@ -1,33 +1,47 @@
 <div class="interactive-wrapper">
-  <div class="page-wapper gv-page-width l-side-margins">
-    <div class="interactive-header interactive-header__main">
-      <a
-        class="gv-section-label"
-        href="https://www.theguardian.com/world/coronavirus-outbreak"
-      >
-        <h3>Coronavirus<span class="gv-section__bar"></span></h3>
-      </a>
-      <div class="gv-headline__wrapper">
-        <h1 class="gv-headline">‘Lost on <span>the frontline’</span></h1>
-      </div>
-      <p class="gv-standfirst gv-main-column">
-        <span>lorem ipsum lorem ipsum</span>
-      </p>
-      <div class="gv-share">{{> share}}</div>
+    <div class="page-wapper gv-page-width l-side-margins">
+        <div class="interactive-header interactive-header__main">
+            <a
+            class="gv-section-label"
+            href="https://www.theguardian.com/world/coronavirus-outbreak"
+            >
+            <h3>Coronavirus<span class="gv-section__bar"></span></h3>
+        </a>
+        <div class="gv-headline__wrapper">
+            <h1 class="gv-headline">‘Lost on <span>the frontline’</span></h1>
+        </div>
+        <p class="gv-standfirst gv-main-column">
+            <span>lorem ipsum lorem ipsum</span>
+        </p>
+        <div class="gv-share">{{> share}}</div>
     </div>
     <div class="gv-share-container gv-left-column">
-      <div class="gv-timestamp">Jan 1 2020</div>
+        <div class="gv-timestamp">Jan 1 2020</div>
     </div>
     <div class="interactive-body gv-main-column">
-      {{#Sheet1}}
-      <div class="gv-main-column--entry">
-      <p>{{firstName}} {{lastName}}, {{age}}</p>
-      <div class="short-bio-expand-btn">
-                 <div class="short-bio-plus"></div>
+        {{#Sheet1}}
+        <div class="gv-main-column--entry">
+            <p>{{firstName}} {{lastName}}, {{age}}</p>
+            <div class="short-bio-expand-btn">
+                <div class="short-bio-plus"></div>
             </div>
-      <span class="gv-main-column--expand-button">Full extract</span>
-      </div>
-      {{/Sheet1}}
+            <span class="gv-main-column--expand-button" data-key="{{lastName}}-{{age}}">Full extract</span>
+
+            <div class="gren-long-biog-wrapper" id="{{lastName}}-{{age}}">
+                <div class="gren-list-biog long-biog">
+                    <div class="biog-meta">
+                        <div class="biog-age">Passed at {{age}}</div>
+                        <div class="biog-nationality">{{typeOfOccupation}} from {{cityWorked}}, {{stateWorked}}</div>
+                    </div>
+                    <div class="biog-pic"><img src="https://i.guim.co.uk/img/media/0271c03c4747023ecbf062f5fc7d31956aa8af01/0_255_1539_1538/master/1539.jpg?width=140&quality=45&auto=format&fit=max&dpr=2&s=168b509779b4d275d024ddfe45c9289e" /></div>
+                    <div class='gren-longbio'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</div>
+                    <div class="biog-credit"><a href="{{readMore}}">Read more</a></div>
+                    <div class="biog-credit">Written by: {{reporter}}</div>
+                </div>
+            </div>
+
+        </div>
+        {{/Sheet1}}
     </div>
-  </div>
+</div>
 </div>

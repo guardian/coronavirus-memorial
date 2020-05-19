@@ -51,6 +51,71 @@
         margin-bottom: 4px;
         display: flex;
     }
+    &.gren-list-item--expanded {
+        opacity: 1;
+        background: white;
+        position: relative;
+
+        .short-bio-expand, .short-biog-insert {
+            display: flex;
+        }
+
+        &::before {
+            background-color: white;
+            content: "";
+            display: block;
+            height: 100%;
+            width: 200vw;
+            left: -100vw;
+            position: absolute;
+            margin-top: -6px;
+            padding-bottom: 6px;
+
+        }
+
+        .list-item-short-name{
+            color: $neutral-7;
+            font-weight: bold;
+            display: block;
+            position: relative;
+            padding-top: 0px;
+            // @include mq(tablet){
+            // 	margin-left: 104px;
+            // }
+        }
+
+        .gren-collapse-button {
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: -26px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $neutral-7;
+
+            .ios &,.android &{
+                top: 0px;
+            }
+        }
+
+        .gren-collapse-icon {
+            display: inline-flex;
+            align-items: center;
+            border: 0;
+            margin-top: 8px;
+            right: 0px;
+            z-index: 1000;
+
+            background: url('<%= path %>/assets/close-button.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 16px;
+            width: 16px;
+        }
+
+    }
 }
 
 .gv-main-column--expand-button {
@@ -59,25 +124,110 @@
 }
 
 .short-bio-plus {
-	align-items: center;
-	z-index: 1000;
-	left: 0px;
-	background: url('<%= path %>/plus.svg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 11px;
-	width: 11px;
-	margin-left: 4px;
-	margin-top: 3px;
+    align-items: center;
+    z-index: 1000;
+    left: 0px;
+    background: url('<%= path %>/plus.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 11px;
+    margin-left: 4px;
+    margin-top: 3px;
     margin-right: 4px;
 }
 
 .short-bio-expand-btn {
-	border-radius: 50%;
-	border: 1px solid $neutral-46;
-	background-color: $neutral-7;
-	height:18px;
-	width:18px;
-	float: left;
+    border-radius: 50%;
+    border: 1px solid $neutral-46;
+    background-color: $neutral-7;
+    height:18px;
+    width:18px;
+    float: left;
     margin-right: 5px;
+}
+
+.gren-long-biog-wrapper {
+    position: relative;
+    max-width: 790px;
+    background-color: white;
+    display: none;
+
+    &.is-selected {
+        display: flex;
+    }
+}
+
+.gren-list-biog{
+    position:relative;
+    font-family: 'Guardian Text Egyptian Web', Georgia, serif;
+    font-size: 16px;
+    line-height: 18px;
+    color:$neutral-100;
+
+    &.short-biog{
+        position:relative;
+        margin-bottom:9px;
+        color:$neutral-100;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 6px;
+        margin-bottom: 66px;
+
+        @include mq(desktop){
+            font-size: 16px;
+            margin-bottom: 52px;
+        }
+    }
+
+    &.long-biog{
+        padding-bottom: 18px;
+        min-height: 100px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #121212;
+
+    }
+}
+
+.biog-meta, .biog-credit {
+	font-family: $f-sans-serif-text;
+	font-size: 12px;
+	line-height: 14px;
+	margin-bottom: 12px;
+
+	& .biog-age {
+		font-weight: bold;
+	}
+}
+
+.biog-credit {
+	margin-top:10px;
+}
+
+.biog-pic{
+	position: relative;
+	width: 96px;
+	height: 96px;
+	margin: 0 10px 0 0;
+	padding-bottom: 3px;
+	background-size: contain;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+	float: left;
+
+	img{
+		width:100%;
+		height: 100%;
+		border: 1px solid $neutral-7;
+        border-radius: 100px;
+	}
+
+	@include mq(tablet){
+		width: 104px;
+		height: 104px;
+		position: absolute;
+		left: -125px;
+		top: -28px;
+	}
 }
