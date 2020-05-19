@@ -3,19 +3,81 @@
 @import "palette";
 
 .gv-main-column--entry {
-    margin: 60px 0;
-    border-top: 2px solid #dfdfdf;
+    position: relative;
+    margin-bottom: 60px;
+    opacity: .4;
 
-    @include mq(tablet) {
-      width: 50%;
+    &:hover {
+        opacity: 1;
+    }
+
+    &:before {
+
+        opacity: 0.3;
+
+        content: attr(data-floor);
+        text-align: left;
+        width: 100px;
+        color: white;
+        position: absolute;
+        left: 0px;
+        top: -26px;
+        @include fs-textSans(3);
+        margin: 0 20px;
+
+        @include mq(phablet) {
+            margin: 0 20px;
+        }
+        @include mq(tablet) {
+            text-align: right;
+            margin: 0 60px;
+            top: 0px;
+        }
+        @include mq(desktop) {
+            top: 0px;
+            text-align: right;
+        }
+
+        @include mq(leftCol) {
+            margin: 0 0 0 60px;
+        }
+
+        @include mq(wide) {
+            margin: 0 0 0 140px;
+        }
     }
 
     p {
-        margin: 0;
-        font-weight: 700;
+        margin-bottom: 4px;
+        display: flex;
     }
-    span {
-        color: #fff;
-        @include fs-textSans(3);
-    }
+}
+
+.gv-main-column--expand-button {
+    color: #fff;
+    @include fs-textSans(3);
+}
+
+.short-bio-plus {
+	align-items: center;
+	z-index: 1000;
+	left: 0px;
+	background: url('<%= path %>/plus.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 11px;
+	width: 11px;
+	margin-left: 4px;
+	margin-top: 3px;
+    margin-right: 4px;
+}
+
+.short-bio-expand-btn {
+	border-radius: 50%;
+	border: 1px solid $neutral-46;
+	background-color: $neutral-7;
+	height:18px;
+	width:18px;
+	float: left;
+    margin-right: 5px;
 }
