@@ -1,0 +1,21 @@
+@import "mq";
+@import "fonts";
+@import "palette";
+
+.gv-main-column--entry {
+    margin: 60px 0;
+    border-top: 2px solid #dfdfdf;
+
+    @include mq(tablet) {
+      width: 50%;
+    }
+
+    p {
+        margin: 0;
+        font-weight: 700;
+    }
+    span {
+        color: #fff;
+        @include fs-textSans(3);
+    }
+}

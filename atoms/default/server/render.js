@@ -22,8 +22,6 @@ export async function render() {
 
   // console.log(htmlJson)
 
-  console.log(victimData)
-
   const copy = Mustache.render(mainHTML, victimData, partials);
   return copy;
 }
