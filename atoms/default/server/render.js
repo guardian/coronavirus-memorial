@@ -8,10 +8,10 @@ const partials = { share };
 
 export async function render() {
   const html = await rp(
-    "https://interactive.guim.co.uk/docsdata-test/1dCS3JokLD47_Vz1HvKNx9HkVXbQsZYzfIRshglbNqpA.json"
+    "https://interactive.guim.co.uk/docsdata-test/13QMzpd9z4Nrf_U7GZ6-zJmY6mueOIJJnndXK5zJyvuY.json"
   );
   let htmlJson = JSON.parse(html);
-  writeFileSync("./assets/copy.json", htmlJson);
+  let victimData = htmlJson.sheets
   // writeFileSync('./assets/related.json', related)
 
   Object.keys(htmlJson).map((key) => {
@@ -22,6 +22,8 @@ export async function render() {
 
   // console.log(htmlJson)
 
-  const copy = Mustache.render(mainHTML, htmlJson, partials);
+  console.log(victimData)
+
+  const copy = Mustache.render(mainHTML, victimData, partials);
   return copy;
 }
